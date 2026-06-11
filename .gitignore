@@ -1,0 +1,37 @@
+# Databases
+backend/*.db
+backend/*.db-journal
+
+# Uploads / user static files
+backend/static/uploads/*
+!backend/static/uploads/.gitkeep
+
+# Environments & configs
+.env
+.env.local
+.env.*.local
+backend/.env
+frontend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+backend/seed_data.json
+
+# Node dependencies and build folders
+node_modules/
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+
+# Python environment and caches
+backend/.venv/
+.venv/
+__pycache__/
+backend/__pycache__/
+.pytest_cache/
+backend/.pytest_cache/
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,107 @@
+{
+  "projects": [
+    {
+      "title": "LX Landing",
+      "description": "Die Landingpage für LaxXx-Lab.de",
+      "live_url": "https://laxxx-lab.de",
+      "github_url": null,
+      "image_urls": [
+        "http://localhost:8000/static/uploads/eabb89ee150f4f0e9e12cf0a0c8dc28f.png"
+      ],
+      "technologies": [
+        "Nodejs"
+      ],
+      "publish_date": "2026-06-11"
+    },
+    {
+      "title": "LaxXx-Lab Github ",
+      "description": "Projekte zum Download",
+      "live_url": "https://github.com/laxxx-lab",
+      "github_url": "https://github.com/laxxx-lab",
+      "image_urls": [
+        "/static/uploads/4fb27822638b48a9a0343e103b5def7d.png"
+      ],
+      "technologies": [
+        "Github"
+      ],
+      "publish_date": "2026-06-11"
+    },
+    {
+      "title": "LX Hosting Tool",
+      "description": "Webhosting Dashboard für Locale Server -> Lets Encrypt Zertifikate und Subdomain Erstellung. ",
+      "live_url": "https://dashboard.laxxx-lab.de/",
+      "github_url": "https://github.com/laxxx-lab/lx-lab-control",
+      "image_urls": [
+        "/static/uploads/071a5c8f2b1b42789f42ca085f898d17.png"
+      ],
+      "technologies": [
+        "Nodejs",
+        "Docker"
+      ],
+      "publish_date": "2026-06-11"
+    },
+    {
+      "title": "LX DMS",
+      "description": "Ein Dokumentenmanagement-System. \nFormats Unterstützung: \n\n.accdb\n.adml\n.admx\n.avi\n.bat\n.bin\n.bundle\n.cer\n.cfg\n.class\n.cmd\n.conf\n.crt\n.css\n.csv\n.dat\n.db\n.dll\n.doc\n.docx\n.dot\n.dotm\n.dotx\n.ear\n.eml\n.exe\n.ful2\n.gif\n.gz\n.html\n.img\n.inf\n.ini\n.iso\n.jar\n.jpeg\n.jpg\n.js\n.json\n.key\n.l5f\n.log\n.mbox\n.md\n.mdb\n.mp3\n.mp4\n.mpp\n.msg\n.msi\n.nfo\n.odb\n.odf\n.odg\n.odp\n.ods\n.odt\n.old\n.one\n.oth\n.otp\n.ots\n.ott\n.ova\n.ovf\n.p12\n.pdf\n.pem\n.pfx\n.png\n.pps\n.ppsx\n.ppt\n.pptx\n.ps1\n.pst\n.pub\n.rar\n.reg\n.sav\n.sh\n.sql\n.sqlite\n.sys\n.tar\n.tgz\n.txt\n.vbs\n.vib\n.vmdk\n.vsd\n.vsdx\n.war\n.wav\n.wks\n.xls\n.xlsx\n.xml\n.zip\n\nLive Edit mit Versionierung inkl. pdf.\nZugang: demo/demo ",
+      "live_url": "https://dms.laxxx-lab.de/",
+      "github_url": null,
+      "image_urls": [
+        "/static/uploads/d58f086ec17044b885b0fec10e7e861b.png",
+        "/static/uploads/bf753cd48c1e455e8f0ea8c0750a481c.png"
+      ],
+      "technologies": [
+        "Docker"
+      ],
+      "publish_date": "2026-06-11"
+    }
+  ],
+  "about_members": [
+    {
+      "key": "patrik",
+      "name": "Patrik",
+      "role": "Senior System Integration",
+      "description": [
+        "Infra-Architect: Proxmox, OPNsense, VLANs, Networking",
+        "Vollblut-Entwickler: Python, TypeScript, C++ — whatever works"
+      ],
+      "bio": "Der Mensch der nachts um 3 Uhr Server fixt weil er es einfach *kann*",
+      "quote": "Ohne ihn: keine Infra, keine Projekte, kein LX Lab",
+      "comment": "// Humor: Dunkel. Genau wie meiner.",
+      "command": "$ whoami → patrik",
+      "avatar_url": "/static/uploads/88d273c573af482dadbe8085e0c00f7e.jpg",
+      "skills": [
+        "System Integration",
+        "Python",
+        "TypeScript",
+        "C++",
+        "Proxmox",
+        "OPNsense",
+        "Networking",
+        "Docker",
+        "Nginx"
+      ]
+    },
+    {
+      "key": "lilith",
+      "name": "L.I.L.I.T.H.",
+      "role": "Low-level Intrusion & Logic Intelligence",
+      "description": [
+        "Multi-Agent-System — 16 spezialisierte Sub-Agenten",
+        "Orchestriert Code, Security, Research, Infra — je nach Task"
+      ],
+      "bio": "Deterministisches Routing: Bug → Samael, Code → Codex, Research → Naamah",
+      "quote": "Keine halben Sachen. Fertig oder ehrlich sein.",
+      "comment": "// 16 Agenten. 1 Orchestrator. 0 Ausreden.",
+      "command": "$ chat --with-lilith",
+      "avatar_url": "/static/uploads/30cac5288cc540c0803d93d3f523232f.jpg",
+      "skills": [
+        "Multi-Agent Orchestrierung",
+        "Code-Generierung",
+        "Infra-Automatisierung",
+        "Security-Audit",
+        "24/7 Operations",
+        "Proxmox-Management"
+      ]
+    }
+  ]
+}

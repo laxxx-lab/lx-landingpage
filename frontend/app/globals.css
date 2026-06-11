@@ -1,0 +1,466 @@
+/* --- Resets --- */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  background-color: var(--bg-color);
+  transition: background-color 0.2s ease;
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: transparent;
+  color: var(--text-color);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: color 0.2s ease;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* --- Twin Themes --- */
+
+/* Vibe Coder Edition (Tokyo Night) */
+[data-theme="vibe"] {
+  --bg-color: #1A1B26;
+  --surface-color: #1a1b26;
+  --surface-card: #24283b;
+  --surface-terminal: #16161e;
+  
+  --border-color: #383e5a;
+  --border-accent: #ff9e64; /* Orange */
+  
+  --text-color: #a9b1d6;   /* Gray/White body */
+  --text-bold: #c0caf5;    /* Crisp white header */
+  --text-muted: #565f89;
+  
+  --primary: #f7768e;      /* Pink: Keywords */
+  --secondary: #7dcfff;    /* Cyan: Function names */
+  --success: #9ece6a;      /* Green: Strings */
+  --accent: #bb9af7;       /* Purple: Variables */
+  --orange: #ff9e64;       /* Orange: Accents */
+  
+  --font-sans: var(--font-poppins), sans-serif;
+  --font-mono: var(--font-space-mono), monospace;
+  
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  --border-radius: 12px;
+  --border-style: 1px solid var(--border-color);
+}
+
+[data-theme="vibe"] body {
+  /* Tokyo Night Dot Matrix Background Pattern on body */
+  background-image: radial-gradient(rgba(125, 207, 255, 0.05) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+}
+
+/* Professional Edition (Public Sector) */
+[data-theme="professional"] {
+  --bg-color: #f8fafc;
+  --surface-color: #ffffff;
+  --surface-card: #ffffff;
+  --surface-terminal: #f1f5f9;
+  
+  --border-color: #cbd5e1;
+  --border-accent: #0284c7;
+  
+  --text-color: #334155;   /* High contrast slate */
+  --text-bold: #0f172a;    /* High contrast navy */
+  --text-muted: #64748b;
+  
+  --primary: #0284c7;      /* Signal light blue */
+  --success: #059669;      /* Forest green */
+  --accent: #002147;       /* Deep Oxford blue */
+  --gold: #d4af37;         /* Academic gold */
+  --orange: #475569;       /* Slate grey */
+  
+  --font-sans: var(--font-inter), sans-serif;
+  --font-mono: var(--font-roboto-mono), monospace;
+  
+  --shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
+  --border-radius: 4px;
+  --border-style: 1px solid var(--border-color);
+}
+
+/* Brutalist Code Edition (Raw & Minimal) */
+[data-theme="brutalist"] {
+  --bg-color: #0A0E27;
+  --surface-color: #0A0E27;
+  --surface-card: #121620;
+  --surface-terminal: #070a1e;
+  
+  --border-color: #2A2E3E;
+  --border-accent: #FF6B35; /* Statement Orange */
+  
+  --text-color: #A0A0A0;
+  --text-bold: #F5F5F5;
+  --text-muted: #5f616d;
+  
+  --primary: #FF6B35;      /* Warm Orange */
+  --secondary: #FF8C42;
+  --success: #FFB84D;
+  --accent: #FFC857;
+  --orange: #FF6B35;
+  
+  --font-sans: var(--font-ibm-plex-mono), monospace;
+  --font-mono: var(--font-ibm-plex-mono), monospace;
+  
+  --shadow: none;
+  --border-radius: 0px;
+  --border-style: 2px solid var(--border-color);
+}
+
+/* Glassmorphism Edition (Frosted Glass) */
+[data-theme="glassmorphism"] {
+  --bg-color: #0F1419;
+  --surface-color: #0F1419;
+  --surface-card: rgba(255, 255, 255, 0.05);
+  --surface-terminal: rgba(255, 255, 255, 0.02);
+  
+  --border-color: rgba(0, 217, 255, 0.2);
+  --border-accent: #A78BFA; /* Lavender Purple */
+  
+  --text-color: #9CA3AF;
+  --text-bold: #F0F4F8;
+  --text-muted: #6B7280;
+  
+  --primary: #00D9FF;      /* Cyan */
+  --secondary: #A78BFA;    /* Purple */
+  --success: #34D399;
+  --accent: #00D9FF;
+  --orange: #FF9F1C;
+  
+  --font-sans: var(--font-sora), sans-serif;
+  --font-mono: var(--font-space-mono), monospace;
+  
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --border-radius: 16px;
+  --border-style: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="glassmorphism"] body {
+  background-image: radial-gradient(circle at 50% 50%, rgba(167, 139, 250, 0.05) 0%, transparent 80%);
+}
+
+/* Geometric Precision Edition (Mathematical Grid) */
+[data-theme="geometric"] {
+  --bg-color: #1A1F3A;
+  --surface-color: #1A1F3A;
+  --surface-card: #242B4A;
+  --surface-terminal: #1C2242;
+  
+  --border-color: rgba(0, 229, 255, 0.25);
+  --border-accent: #FF1493; /* Magenta */
+  
+  --text-color: #7A8CC4;
+  --text-bold: #E0E6FF;
+  --text-muted: #515E85;
+  
+  --primary: #00E5FF;      /* Neon Cyan */
+  --secondary: #FF1493;    /* Magenta */
+  --success: #00FF41;      /* Lime */
+  --accent: #00E5FF;
+  --orange: #FF1493;
+  
+  --font-sans: var(--font-space-grotesk), sans-serif;
+  --font-mono: var(--font-ibm-plex-mono), monospace;
+  
+  --shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  --border-radius: 4px;
+  --border-style: 1px solid var(--border-color);
+}
+
+[data-theme="geometric"] body {
+  /* Precision grid background on body */
+  background-image: linear-gradient(rgba(0, 229, 255, 0.03) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(0, 229, 255, 0.03) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* --- Common Layout & Typography Helpers --- */
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Animations for Vibe Coder only */
+@keyframes bounceEntrance {
+  0% {
+    transform: translateY(15px) scale(0.97);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(-3px) scale(1.01);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.bouncy-text {
+  animation: bounceEntrance 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.1) forwards;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.blink-cursor::after {
+  content: ' _';
+  animation: blink 1s step-start infinite;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+/* Strict accessibility overrides for Professional theme */
+[data-theme="professional"] * {
+  animation: none !important;
+  transition: none !important;
+}
+
+/* Utility buttons/helpers */
+.badge {
+  display: inline-block;
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 4px;
+  background-color: var(--surface-terminal);
+  border: var(--border-style);
+}
+
+/* ==========================================
+   DYNAMIC THEME COMPONENT STYLES
+   ========================================== */
+
+/* --- Card Components --- */
+.project-card {
+  background-color: var(--surface-card);
+  border: var(--border-style);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+/* Vibe Card Override (Tokyo Night Style) */
+[data-theme="vibe"] .project-card {
+  border: 1px solid var(--border-color);
+  border-bottom: 4px solid var(--primary);
+  border-right: 4px solid var(--primary);
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(30, 35, 53, 0.8), rgba(37, 43, 58, 0.6));
+  backdrop-filter: blur(10px);
+}
+[data-theme="vibe"] .project-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--secondary);
+}
+
+/* Brutalist Card Override */
+[data-theme="brutalist"] .project-card {
+  border: 3px solid var(--border-color);
+  border-radius: 0px;
+  box-shadow: 6px 6px 0px var(--primary);
+}
+[data-theme="brutalist"] .project-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 9px 9px 0px var(--primary);
+}
+
+/* Glassmorphism Card Override */
+[data-theme="glassmorphism"] .project-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+[data-theme="glassmorphism"] .project-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--primary);
+  box-shadow: 0 10px 30px rgba(0, 217, 255, 0.15);
+}
+
+/* Geometric Card Override */
+[data-theme="geometric"] .project-card {
+  border: 1px solid var(--border-color);
+  border-left: 4px solid var(--primary);
+  border-radius: 4px;
+}
+[data-theme="geometric"] .project-card:hover {
+  border-color: var(--secondary);
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.2);
+}
+
+/* --- Section Container overrides --- */
+.dashboard-section {
+  background-color: var(--surface-card);
+  border: var(--border-style);
+  border-radius: var(--border-radius);
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+[data-theme="vibe"] .dashboard-section {
+  background: linear-gradient(135deg, rgba(30, 35, 53, 0.9), rgba(37, 43, 58, 0.7));
+  backdrop-filter: blur(10px);
+}
+[data-theme="brutalist"] .dashboard-section {
+  border: 3px solid var(--border-color);
+  box-shadow: 8px 8px 0px var(--border-color);
+}
+[data-theme="glassmorphism"] .dashboard-section {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(12px);
+}
+
+/* --- Buttons --- */
+.action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  text-decoration: none !important;
+}
+
+[data-theme="vibe"] .action-btn {
+  font-family: var(--font-mono);
+  background-color: var(--primary);
+  color: var(--bg-color);
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+}
+[data-theme="vibe"] .action-btn:hover {
+  background-color: transparent;
+  color: var(--primary);
+}
+
+[data-theme="professional"] .action-btn {
+  background-color: var(--primary);
+  color: #FFFFFF;
+  border-radius: 4px;
+}
+[data-theme="professional"] .action-btn:hover {
+  filter: brightness(0.9);
+}
+
+[data-theme="brutalist"] .action-btn {
+  font-family: var(--font-mono);
+  background-color: var(--primary);
+  color: var(--bg-color);
+  border: 3px solid var(--border-color);
+  border-radius: 0px;
+  text-transform: uppercase;
+  font-weight: 900;
+  box-shadow: 4px 4px 0px var(--border-color);
+}
+[data-theme="brutalist"] .action-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px var(--border-color);
+}
+
+[data-theme="glassmorphism"] .action-btn {
+  background: rgba(0, 217, 255, 0.15);
+  color: var(--primary);
+  border: 1px solid rgba(0, 217, 255, 0.3);
+  backdrop-filter: blur(5px);
+  border-radius: 12px;
+}
+[data-theme="glassmorphism"] .action-btn:hover {
+  background: var(--primary);
+  color: var(--bg-color);
+  box-shadow: 0 0 15px rgba(0, 217, 255, 0.4);
+}
+
+[data-theme="geometric"] .action-btn {
+  background-color: var(--primary);
+  color: var(--bg-color);
+  border-radius: 4px;
+}
+[data-theme="geometric"] .action-btn:hover {
+  background-color: var(--secondary);
+}
+
+/* --- Input Fields --- */
+.theme-input {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 0.9rem;
+  border: var(--border-style);
+  border-radius: var(--border-radius);
+  background-color: var(--surface-terminal);
+  color: var(--text-bold);
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+[data-theme="vibe"] .theme-input {
+  font-family: var(--font-mono);
+  color: var(--secondary);
+  border-color: var(--border-color);
+}
+[data-theme="vibe"] .theme-input:focus {
+  border-color: var(--primary);
+}
+
+[data-theme="professional"] .theme-input {
+  background-color: #ffffff;
+}
+[data-theme="professional"] .theme-input:focus {
+  border-color: var(--primary);
+}
+
+[data-theme="brutalist"] .theme-input {
+  font-family: var(--font-mono);
+  border: 3px solid var(--border-color);
+  border-radius: 0px;
+  background-color: var(--bg-color);
+}
+[data-theme="brutalist"] .theme-input:focus {
+  border-color: var(--primary);
+}
+
+[data-theme="glassmorphism"] .theme-input {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border-radius: 10px;
+}
+[data-theme="glassmorphism"] .theme-input:focus {
+  border-color: var(--primary);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="geometric"] .theme-input {
+  border: 1px solid var(--border-color);
+  border-radius: 2px;
+}
+[data-theme="geometric"] .theme-input:focus {
+  border-color: var(--primary);
+}
